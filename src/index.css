@@ -1,13 +1,29 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(59 130 246 / 9%);
+  font-size: 20px;
+  font-weight: normal;
 }
+@font-face {
+  font-family: Gumela;
+  src: url('./components/assets/Gumela.otf');
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base{
+body {
+  @apply font-[Gumela];
+}
+li{
+  @apply px-4;
+  @apply cursor-pointer;
+  @apply hover:text-[#fcd303];
+  @apply rounded-lg;
+  
+
+}
 }
